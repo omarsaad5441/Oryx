@@ -1,0 +1,286 @@
+/* Start Global */
+:root {
+    --main-color: #0fb9b1;
+    --alt-color: #eb3b5a;
+}
+body {
+    font-family: "Poppins", "Open Sans", sans-serif;
+}
+.container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+.clearfix {
+    clear: both;
+}
+/* End Global */
+/* Start Header */
+header nav {
+    padding: 20px 0;
+    display: flex;
+}
+header nav .logo {
+    margin: 0;
+    width: 20%;
+    font-size: 46px;
+    color: var(--main-color);
+}
+header nav .logo:first-letter {
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 0px 5px;
+    border-radius: 14px;
+    margin-right: 3px;
+}
+header nav .links {
+    width: 100%;
+    text-align: right;
+}
+header nav .links > li {
+    display: inline-block;
+    margin-left: 15px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+header nav .links li:hover,
+header nav .links li.services:hover i {
+    background-color: var(--main-color);
+    color: #fff;
+}
+header nav .links li.services {
+    position: relative;
+}
+header nav .links li.services i {
+    color: var(--main-color);
+    transition: all 0.2s ease-in;
+}
+header nav .links li.services .dropdown {
+    position: absolute;
+    background-color: var(--alt-color);
+    top: 38px;
+    left: 0px;
+    z-index: 13;
+}
+header nav .links li.services .arrow {
+    display: block;
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent transparent transparent var(--alt-color);
+    transform: rotateZ(270deg);
+    position: absolute;
+    top: -40px;
+    left: 5px;
+}
+header nav .links li.services .services-links {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    width: 200px;
+    text-align: left;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+}
+header nav .links li.services .services-links li {
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: all 0.2s ease-in;
+}
+header .services .dropdown {
+    display: none;
+}
+header .services.active .dropdown {
+    display: block;
+}
+header section {
+    background: url("../images/header\ background.png") no-repeat top center fixed;
+    min-height: 700px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+header section .overlay {
+    background-color: #0fb9b196;
+}
+header section .content {
+    margin-top: 25%;
+    transform: translateY(-50%);
+}
+header section .content h1 {
+    font-size: 46px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+header section .content p {
+    color: #eee;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+header section .content button {
+    margin-top: 20px;
+    background-color: transparent;
+    padding: 10px 30px;
+    border: 3px solid var(--alt-color);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+header section .content button:hover{
+    background-color: var(--alt-color);
+}
+/* End Header */
+/* Start Contact Us */
+.contact-us {
+    position: fixed;
+    z-index: 12;
+    background-color: #fff;
+    padding: 10px 20px;
+    height: 100vh;
+    width: 300px;
+    text-align: center;
+    transition: left 1s ease-in-out;
+    left: -420px;
+    overflow-y: auto;
+}
+.contact-us h1 {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+.contact-us > div {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.contact-us > div:hover {
+    background-color: var(--main-color);
+}
+.contact-us h2 {
+    color: #707070;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.contact-us > div:hover h2 {
+    color: #fff;
+}
+.contact-us .icon-container {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #707070;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+.contact-us > div:hover .icon-container {
+    background-color: var(--alt-color);
+    border-color: var(--alt-color);
+}
+.contact-us .icon-container i {
+    color: var(--alt-color);
+    line-height: 50px;
+    font-size: 25px;
+    transition: all 0.5s ease-in-out;
+}
+.contact-us > div:hover .icon-container i {
+    color: #fff;
+}
+.contact-us p {
+    font-size: 18px;
+    color: var(--main-color);
+}
+.contact-us > div:hover p {
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.contact-us > i {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 273px;
+    line-height: 50px;
+    font-size: 27px;
+    color: #707070;
+    cursor: pointer;
+}
+/* End Contact Us */
+/* Start About Us */
+.about-us {
+    padding: 30px 0;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+.about-us h2 {
+    position: relative;
+    color: #fff;
+    font-size: 32px;
+    background-color: var(--main-color);
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+}
+.about-us span {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    background-color: var(--main-color);
+    left: 0;
+    top: 75px;
+    z-index: 0;
+}
+.about-us > div {
+    width: 49%;
+    height: 100%;
+    float: left;
+    padding: .5%;
+}
+.about-us > div.left .content {
+    padding: 60px;
+}
+.about-us > div.left .content p {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+}
+.about-us > div.left .content button {
+    padding: 20px;
+    background-color: var(--alt-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+.about-us > div.left .content button:hover {
+    background-color: #bd304a;
+}
+.about-us > div img {
+    width: 500px;
+}
+/* End About Us */
