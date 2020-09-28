@@ -9,8 +9,26 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     </head>
     <body>
+        <div class="video-popup overlay">
+            <div class="close-popup">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="video-container">
+                <h1>Explanation Video Of the Program</h1>
+                <video controls>
+                    <source src="videos/Vue.js.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- Start Scroll To Top Button -->
+        <div class="scroll-to-top">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <!-- End Scroll To Top Button -->
+        <!-- Start Contact Us Section -->
         <section class="contact-us">
             <h1>Contact Us</h1>
             <div class="phone-section">
@@ -36,12 +54,16 @@
             </div>
             <i class="fa fa-chevron-left"></i>
         </section>
+        <!-- End Contact Us Section -->
+        <!-- Start Header Section -->
         <header>
             <div class="container">
                 <nav>
                     <h1 class="logo">Oryx</h1>
                     <ul class="links">
                         <li>Home</li>
+                        <li>About Us</li>
+                        <li>Our Gallery</li>
                         <li class="services">
                             Services 
                             <i class="fa fa-chevron-down"></i>
@@ -53,10 +75,9 @@
                                 </ul>
                             </div>
                         </li>
-                        <li>About Us</li>
                         <li class="contact">Contact Us</li>
-                        <li>Our Doctors</li>
                     </ul>
+                    <button class="toggle-links"><i class="fa fa-bars"></i></button>
                 </nav>
             </div>
             <section>
@@ -69,24 +90,125 @@
                 </div>
             </section>
         </header>
+        <!-- End Header Section -->
+        <!-- Start About Us Section -->
         <section class="about-us">
-            <span></span>
             <h2>About Us</h2>
             <div class="left">
                 <div class="content">
-                    <p>Oryx is a system for healthy buildings, 
+                    <p>Oryx is a system for medical organization, 
                         In terms of patient services, it organizes 
                         the hospital’s affairs from the inside and 
                         organizes the goods that enter and leave the 
                         hospital in a sound and simple system</p>
-                    <button>Video explanation of the program</button>
+                    <button id="openVideo">Video explanation of the program</button>
                 </div>
             </div>
             <div class="right">
-                <img src="images/6301.jpg" alt="">
+                <img src="images/6301.jpg">
             </div>
-            <div class="clearfix"></div>
         </section>
+        <!-- End About Us Section -->
+        <!-- Start Our Gallery Section -->
+        <section class="our-gallery">
+            <div class="container">
+                <h1>Our Gallery</h1>
+                <div class="gallery-container">
+                    <div class="img">
+                        <img src="images/gallery/3886698.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                    <div class="img">
+                        <img src="images/gallery/3880199.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                    <div class="img">
+                        <img src="images/gallery/3828067.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                    <div class="img">
+                        <img src="images/gallery/3658159.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                    <div class="img">
+                        <img src="images/gallery/3761069.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                    <div class="img">
+                        <img src="images/gallery/3779076.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                    <div class="img">
+                        <img src="images/gallery/3769181.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                    <div class="img">
+                        <img src="images/gallery/3769178.jpg" alt="">
+                        <div class="overlay right"></div>
+                        <div class="overlay left"></div>
+                        <span>Oryx System <button>Registration</button></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Gallery Section -->
+        <!-- Start img popup -->
+        <div class="img-popup">
+            <img src="images/gallery/3761069.jpg" alt="">
+            <div class="content">
+                <h1>Regestration</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Perferendis fugit sint nisi ducimus deserunt ullam optio 
+                suscipit nesciunt natus architecto? Blanditiis quos nemo 
+                ut minus eligendi incidunt dicta ratione harum.</p>
+            </div>
+            <span>X</span>
+        </div>
+        <!-- End img popup -->
+        <!-- Start Footer -->
+        <footer>
+            <div class="container">
+                <section>
+                    <h1 class="logo">Oryx</h1>
+                    <h2>Follow Us</h2>
+                    <ul class="pages-links">
+                        <li><i class="fa fa-facebook"></i> <span>Facebook</span></li>
+                        <li><i class="fa fa-instagram"></i> <span>Instgram</span></li>
+                        <li><i class="fa fa-twitter"></i> <span>Twitter</span></li>
+                        <li><i class="fa fa-linkedin"></i> <span>Linked In</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Quick Links</h2>
+                    <ul class="links">
+                        <li>Blog</li>
+                        <li>FAQ</li>
+                        <li>Terms & Condition</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                    <p>We Are Open From 8:00 AM To 4:00 PM</p>
+                </section>
+                <div class="clearfix"></div>
+            </div>
+        </footer>
+        <div class="copyright">
+            &copy; Copyright 2020. All rights reserved to SQM Office
+        </div>
+        <!-- End Footer -->
         <script src="scripts/script.js"></script>
     </body>
 </html
